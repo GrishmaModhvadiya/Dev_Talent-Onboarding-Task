@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+
+    @Scripts.Render("~/bundles/modernizr")
+    @RenderSection("styles", required: false)
+</head>
+<body>
+    <div class="ui inverted  menu">
+
+        <a class="item">@Html.ActionLink("React", "Index", "Home")</a>
+        <a class="item">@Html.ActionLink("Customers", "Index", "Customer")</a>
+        <a class="item">@Html.ActionLink("Products", "Index", "Products")</a>
+        <a class="item">@Html.ActionLink("Stores", "Index", "Store")</a>
+        <a class="item">@Html.ActionLink("Sales", "Index", "Sales")</a>
+
+    </div>
+    
+    <div class="container body-content">
+        @RenderBody()
+        
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    @*@Scripts.Render("~/bundles/bootstrap")*@
+    @RenderSection("scripts", required: false)
+</body>
+
+</html>
